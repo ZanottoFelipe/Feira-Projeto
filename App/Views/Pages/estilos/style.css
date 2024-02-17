@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root{
+    --color-background: #fffdf7;
+    --color-black: #212121;
+    --color-text: #4f4f4f;
+    --color-text-out: #90908e;
+    --color-primary: #ffbf00;
+    --color-secundary: #fff2cc;
+    --color-white: #ffffff;
+    --color-red: #e74c3c;
+    --color-green: #2ecc71;
+    --color-separate: #cccccc;
+    --color-black-heavy: #000;
+
+
+}
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+
+}
+
+
+html{	
+	height:100%;
+   
+}
+
+main {
+    width: calc(100% - 250px);
+    background-color: #E1E1E1;
+    padding: 2%;
+    overflow-y: scroll;
+    position: fixed;
+    left: 250px;
+    height: 100%;
+}
+.hiden{
+    display: none;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #480CA8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+}
+.sidebar{
+    top: 0;    
+    left: 0;
+    bottom: 0;  
+    position: fixed;
+    width: 250px; 
+    background-color: #212529;
+    color: white;    
+    padding: 10px 10px;
+    overflow-y: scroll;
+}
+.lgo{     
+   margin-bottom: 15px;
+   text-align: center;
+}
+.lgo img{
+    max-width: 150px;
+}
+
+hr{
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+    opacity: .25;
+}
+.menu a{
+    
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-left: 10px;
+    color: white;
+    
+}
+
+.menu h3{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding-left: 10px;
+    color: white;
+}
+.cadastros{
+    padding-left: 20px;
+   
+}
+
+.menu {
+    align-items: center;
+}
+.menu i{
+    font-size: 12px;
+    margin-right: 5px;
+    
+}
+
+.btn{
+    background-color: #0D6EFD;
+    padding: 6px;
+    border-radius: 0.3rem;
+}
+
+/* mensgame de avisos */
+.container-mensagens{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    z-index: 9999;
+
+}
+
+.toast{
+    color: var(--color-white);
+    padding: 10px 25px;
+    font-size: 18px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+   
+
+}
+
+.toast.red{
+    background-color: var(--color-red);
+
+}
+
+.toast.green{
+    background-color: var(--color-green);
+}
+
+/*  fim mensagem avisos */
+/*  home */
+.btn-home{
+    border: none;
+    padding: 5px;
+    border-radius: 0.3rem;
+    opacity: 0.8;
+}
+
+.btn-home:hover{
+    opacity: 1;
+}
+.btn-info{
+    padding: 5px 8px;
+    border-radius: 0.2rem;
+    margin-right: 10px;    
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    opacity: 0.8;
+}
+.btn-info:hover{
+    cursor: pointer;
+    opacity: 2;
+}
+.excluir{
+    background-color: #FA8072;
+}
+.info{
+    background-color: var(--color-green) ;
+}
+
+.tabela{
+    width: 100%;   
+    padding: 10px;
+    background-color: rgb(244, 242, 242);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 6px 18px 29px -3px rgba(0,0,0,0.51);
+    -moz-box-shadow: 6px 18px 29px -3px rgba(0,0,0,0.51);
+    box-shadow: 6px 18px 29px -3px rgba(0,0,0,0.51);
+}
+
+.head-tabelas{
+    display: flex;
+}
+
+.head-tabelas i{
+    padding: 2px;
+    margin-right: 7px;
+    font-size: 20px;
+}
+.tabela h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.clientes{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    
+   
+}
+
+.clientes td, .clientes th {
+border: 1px solid #ddd;
+padding-left: 22px;
+padding-top: 7px;
+padding-bottom: 7px;
+}
+
+.clientes tr:nth-child(even){background-color: #f2f2f2;}
+
+.clientes tr:hover {background-color: #ddd;}
+
+.clientes th {
+
+text-align: left;
+background-color: #04AA6D;
+color: white;
+}
+
+
+.corpo-tabelas input{
+    width: 100%;
+    padding: 4px 7px;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    margin-bottom: 15px;
+}
+
+.tabela input[type=submit]{
+    width: 100px;
+    height: 30px;
+    background-color:  #04AA6D;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+.tabela input[type=submit]:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* fim home */
+
+/* cadastro empresa */
+
+.form-empresa{
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.form-empresa label{
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    
+}
+.form-empresa input[type=email]{
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-empresa input[type=text], input[type=email], input[type=password], input[type=search]{
+
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+
+}
+
+
+.form-empresa i{
+    position: fixed;
+    z-index: 999;
+    margin-top: 8px;
+    margin-left: 7px;
+    color: white;
+}
+
+#procurar-form{
+    padding-left: 10px;
+    padding-bottom: 3px;
+
+}
+
+#baixo{
+    display: block;
+    margin-top: 20px;
+}
+
+/* fim cadastro empresa */
+
+/* feira */
+.pdf{
+    background-color: #699dec;
+    width: 100px;
+    height: 30px;   
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+select{
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    border-radius: 0.3rem;
+    width: 20%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+select option{
+    font-size: 17px;
+    background-color: #e0e0e0;
+}
+
+#iniciar-feira{
+    width: 100%;
+    height: 40px;
+    font-size: 25px;
+}
+
+#finalizar-feira{
+    min-width: 80%;
+   
+    margin: 0 auto;     
+    height: 40px;
+    font-size: 25px;
+    position: absolute;
+    top: 5px;
+    left: 10%;
+    right: 10%;
+    
+    
+    
+}
+
+#proximo-funcionario{
+    min-width: 20%;
+    width: auto;
+    height: 35px;
+    font-size: 20px;
+    
+}
+
+#pedido{
+    
+    width: 70%;
+    height: auto;
+    padding: 10px;
+    
+}
+#pedido p{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+#tabela-pedido-cliente{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#tabela-pedido-cliente td, #tabela-pedido-cliente th {
+    border: 1px solid #ddd;
+    padding-left: 22px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    }
+    
+    #tabela-pedido-cliente tr:nth-child(even){background-color: #f2f2f2;}
+    
+    #tabela-pedido-cliente tr:hover {background-color: #ddd;}
+    
+    #tabela-pedido-cliente th {
+    
+    text-align: left;
+    background-color: #afaeae;
+    color: black;
+    }
+
+    #total-pedido{
+        text-align: center;
+    }
+  
+    .cobranca 
+    {
+        display: flex;
+        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        
+        justify-content: flex-start;
+        align-items: baseline; 
+
+    }
+
+    .cobranca input{
+        margin-left: 12px;
+    }
+    .cobranca input[type=number]{
+        padding: 7px;
+    }
+
+/* modal feira em andamento  */
+#modal-pdf {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+#modal-conteudo{
+    margin-bottom: 50px;
+}
+.flex-modal{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.header{
+    margin-bottom: 25px;
+}
+
+.btn-imprimir{
+    font-size: 20px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+.btn-imprimir:hover{
+    border: 1px solid #ccc;
+   
+}
+
+.btn-fechar{
+    font-size: 20px;
+    width: 40px;
+    border: none;
+    background-color: transparent;
+}
+
+#modal-tabela-pedido-cliente th {
+    background-color: #ccc;
+}
+
+#modal-tabela-pedido-cliente td, #modal-tabela-pedido-cliente th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+#modal-tabela-pedido-cliente tfoot td {
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+
+/* inicio modal feira single */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 7% auto;
+    padding: 20px;
+   
+    width: 80%;
+    overflow: auto;
+   
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close i{
+    font-size: 20px;
+}
+
+#detalhes-pedido p{
+    margin-bottom: 15px;
+    font-size: 16px;
+
+}
+
+/*  fim modal */
+
+.prox{
+    background-color: #04AA6D;
+    padding: 5px 8px;    
+    margin-right: 10px;      
+    border: 1px solid #ccc;
+    opacity: 0.8;
+    width: 100px;
+    height: 30px;   
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    opacity: 0.8;
+}
+
+.prox:hover{
+    opacity: 1;
+}
+
+
+.btn-modal{    
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 0.3rem;
+    margin-left: 15px;
+    margin-top: 25px;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.btn-modal:hover{
+    opacity: 1;
+}
+
+.modal-footer{
+    display: flex;
+}
+
+.cancel{
+    background-color: #FA8072;
+}
+
+.confirm{
+    background-color: #04AA6D;
+}
+
+.atencao{
+    background-color: var(--color-black)!important;
+}
+
+.btn-a{
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    background-color:  #04AA6D;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    opacity: 0.7;
+    padding: 5px 10px;
+    margin-left: 25px;
+    
+}
+.btn-a:hover{
+    opacity: 1;
+}
+
+#unico {
+    margin-left: 25px;
+    background-color: var(--color-red);
+}
+
+/* fim feira*/
+.feira-iniciada-sidebar {
+    display: none !important;
+}
+
+.feira-iniciada {
+    width: 100%;
+    left: 0px;
+}
+
+
+@media print {
+    .ocultar-ao-imprimir {
+        display: none !important;
+    }
+    .modal-content {
+        width: 100%;
+        height: auto;
+    }
+}
