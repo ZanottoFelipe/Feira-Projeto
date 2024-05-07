@@ -22,6 +22,7 @@ O sistema inclui funcionalidades para o cadastro de produtos e empresas, control
 ## Instruções de Uso
 
 1. Clone este repositório:
+https://github.com/ZanottoFelipe/Feira-Projeto.git
 
 2. Configure seu ambiente de desenvolvimento PHP e MySQL.
 
